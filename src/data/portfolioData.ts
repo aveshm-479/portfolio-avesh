@@ -1,0 +1,363 @@
+import {
+  Project,
+  ProjectCategory,
+  Skill,
+  SkillCategory,
+  Experience,
+} from "../types/portfolio";
+
+export const projects: Project[] = [
+  {
+    id: "proj-1",
+    title: "Automated Tax Reclaim Platform",
+    description:
+      "Serverless tax recovery workflows built for Revenir alongside global banking partners.",
+    longDescription:
+      "Designed and implemented event-driven services that orchestrate submissions, validations, and payouts by combining AWS Lambda, Step Functions, Kafka, and DynamoDB with resilient Node.js APIs.",
+    techStack: [
+      "Node.js",
+      "TypeScript",
+      "AWS Lambda",
+      "Kafka",
+      "EventBridge",
+      "Step Functions",
+      "DynamoDB",
+    ],
+    category: ProjectCategory.API,
+    image:
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop",
+    demoUrl: undefined,
+    githubUrl: undefined,
+    featured: true,
+    createdAt: new Date("2024-01-15"),
+  },
+  {
+    id: "proj-2",
+    title: "MROTools.io Suite",
+    description:
+      "Tool management platform for QOCO that unifies assignment workflows and integration APIs.",
+    longDescription:
+      "Delivered multi-tenant Node.js services with Fastify and tRPC, hardened schema contracts with Zod/TypeBox, and automated deployments across AWS to keep aviation tooling operations in sync in real time.",
+    techStack: [
+      "Node.js",
+      "Fastify",
+      "tRPC",
+      "AWS",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+    ],
+    category: ProjectCategory.WEB,
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop",
+    demoUrl: undefined,
+    githubUrl: undefined,
+    featured: true,
+    createdAt: new Date("2023-08-01"),
+  },
+  {
+    id: "proj-3",
+    title: "GamerzArena Esports Platform",
+    description:
+      "Global esports community delivering tournaments, payouts, and sponsorship experiences.",
+    longDescription:
+      "Built REST services for admin, web, and mobile clients with Node.js and MySQL, optimizing leaderboards, authentication, and prize fulfillment for thousands of concurrent gamers.",
+    techStack: ["Node.js", "Express", "MySQL", "REST", "Redis", "AWS"],
+    category: ProjectCategory.WEB,
+    image:
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop",
+    demoUrl: "https://www.gamerzarena.com",
+    githubUrl: undefined,
+    featured: true,
+    createdAt: new Date("2022-04-01"),
+  },
+  {
+    id: "proj-4",
+    title: "TeroTAM Asset Intelligence",
+    description:
+      "Asset management and service ticketing platform for distributed enterprises.",
+    longDescription:
+      "Implemented microservices in Node.js with PostgreSQL and MongoDB, enabling real-time asset monitoring, ticket workflows, and analytics across field teams.",
+    techStack: [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "MongoDB",
+      "Microservices",
+      "Docker",
+    ],
+    category: ProjectCategory.WEB,
+    image:
+      "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=600&h=400&fit=crop",
+    demoUrl: "https://www.terotam.com",
+    githubUrl: undefined,
+    featured: false,
+    createdAt: new Date("2021-09-01"),
+  },
+  {
+    id: "proj-5",
+    title: "EZHL Roadside Assistance",
+    description:
+      "Dual-sided mobile platform that connects customers and drivers for vehicle towing.",
+    longDescription:
+      "Delivered secure payment-enabled REST services using Node.js, MySQL, and Payfort/Stripe gateways, powering customer apps, driver apps, and partner dashboards.",
+    techStack: [
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Stripe",
+      "Payfort",
+      "AWS S3",
+    ],
+    category: ProjectCategory.MOBILE,
+    image:
+      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=600&h=400&fit=crop",
+    demoUrl: "https://ezhlapp.com",
+    githubUrl: undefined,
+    featured: false,
+    createdAt: new Date("2020-06-01"),
+  },
+  {
+    id: "proj-6",
+    title: "LeagueUp Tournament Platform",
+    description:
+      "Mobile-first league registration and score tracking solution for amateur sports.",
+    longDescription:
+      "Built resilient REST APIs with Node.js and MySQL, enabling organizers to configure tournaments, capture scores, and push live standings to Android/iOS apps.",
+    techStack: ["Node.js", "Express", "MySQL", "Firebase", "REST APIs"],
+    category: ProjectCategory.MOBILE,
+    image:
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
+    demoUrl: undefined,
+    githubUrl: undefined,
+    featured: false,
+    createdAt: new Date("2019-11-01"),
+  },
+];
+
+export const skills: Skill[] = [
+  {
+    id: "skill-node",
+    name: "Node.js",
+    category: SkillCategory.BACKEND,
+    proficiency: 9,
+    icon: "🟢",
+  },
+  {
+    id: "skill-ts",
+    name: "TypeScript",
+    category: SkillCategory.BACKEND,
+    proficiency: 9,
+    icon: "📘",
+  },
+  {
+    id: "skill-express",
+    name: "Express.js",
+    category: SkillCategory.BACKEND,
+    proficiency: 9,
+    icon: "⚡",
+  },
+  {
+    id: "skill-fastify",
+    name: "Fastify",
+    category: SkillCategory.BACKEND,
+    proficiency: 8,
+    icon: "🚀",
+  },
+  {
+    id: "skill-nest",
+    name: "NestJS",
+    category: SkillCategory.BACKEND,
+    proficiency: 8,
+    icon: "🛡️",
+  },
+  {
+    id: "skill-tsed",
+    name: "Ts.ED",
+    category: SkillCategory.BACKEND,
+    proficiency: 7,
+    icon: "🧩",
+  },
+  {
+    id: "skill-serverless",
+    name: "Serverless Architectures",
+    category: SkillCategory.BACKEND,
+    proficiency: 9,
+    icon: "☁️",
+  },
+  {
+    id: "skill-graphql",
+    name: "GraphQL",
+    category: SkillCategory.BACKEND,
+    proficiency: 7,
+    icon: "🔗",
+  },
+  {
+    id: "skill-trpc",
+    name: "tRPC",
+    category: SkillCategory.BACKEND,
+    proficiency: 8,
+    icon: "🔄",
+  },
+  {
+    id: "skill-prisma",
+    name: "Prisma",
+    category: SkillCategory.BACKEND,
+    proficiency: 8,
+    icon: "🧮",
+  },
+  {
+    id: "skill-rest",
+    name: "REST APIs",
+    category: SkillCategory.BACKEND,
+    proficiency: 9,
+    icon: "🔌",
+  },
+  {
+    id: "skill-mysql",
+    name: "MySQL",
+    category: SkillCategory.DATABASE,
+    proficiency: 9,
+    icon: "🐬",
+  },
+  {
+    id: "skill-postgres",
+    name: "PostgreSQL",
+    category: SkillCategory.DATABASE,
+    proficiency: 8,
+    icon: "🐘",
+  },
+  {
+    id: "skill-mongo",
+    name: "MongoDB",
+    category: SkillCategory.DATABASE,
+    proficiency: 8,
+    icon: "🍃",
+  },
+  {
+    id: "skill-dynamodb",
+    name: "DynamoDB",
+    category: SkillCategory.DATABASE,
+    proficiency: 8,
+    icon: "📂",
+  },
+  {
+    id: "skill-redis",
+    name: "Redis",
+    category: SkillCategory.DATABASE,
+    proficiency: 7,
+    icon: "🧠",
+  },
+  {
+    id: "skill-aws",
+    name: "AWS Lambda & API Gateway",
+    category: SkillCategory.DEVOPS,
+    proficiency: 9,
+    icon: "🛰️",
+  },
+  {
+    id: "skill-eventbridge",
+    name: "EventBridge & SQS",
+    category: SkillCategory.DEVOPS,
+    proficiency: 8,
+    icon: "📡",
+  },
+  {
+    id: "skill-kafka",
+    name: "Kafka Streams",
+    category: SkillCategory.DEVOPS,
+    proficiency: 8,
+    icon: "💽",
+  },
+  {
+    id: "skill-turbo",
+    name: "Turborepo",
+    category: SkillCategory.DEVOPS,
+    proficiency: 7,
+    icon: "🧱",
+  },
+  {
+    id: "skill-docker",
+    name: "Docker",
+    category: SkillCategory.DEVOPS,
+    proficiency: 7,
+    icon: "🐳",
+  },
+  {
+    id: "skill-jest",
+    name: "Jest & Unit Testing",
+    category: SkillCategory.OTHER,
+    proficiency: 8,
+    icon: "🧪",
+  },
+];
+
+export const experiences: Experience[] = [
+  {
+    id: "exp-1",
+    company: "Gateway Group of Companies",
+    position: "Senior Software Engineer",
+    description:
+      "Lead Node.js engineer delivering cloud-native backends for fintech and enterprise programs.",
+    startDate: new Date("2022-09-01"),
+    isCurrentPosition: true,
+    skills: ["Node.js", "AWS", "Kafka", "Serverless", "Fastify"],
+    location: "Ahmedabad, India",
+    highlights: [
+      "Architected serverless workflows on AWS Lambda, DynamoDB, and Step Functions that automate tax recovery for banking clients.",
+      "Developed internal Fastify/tRPC frameworks that cut feature delivery time by 30% while improving observability.",
+      "Mentor a pod of engineers, drive code reviews, and coordinate sprint planning with product and QA partners.",
+    ],
+  },
+  {
+    id: "exp-2",
+    company: "Alchemy Technologies",
+    position: "Node.js Developer",
+    description:
+      "Built high-throughput APIs and integrations for lending and payments workloads.",
+    startDate: new Date("2020-11-01"),
+    endDate: new Date("2022-09-01"),
+    isCurrentPosition: false,
+    skills: ["Node.js", "Serverless", "PostgreSQL", "GraphQL", "Prisma"],
+    location: "Ahmedabad, India",
+    highlights: [
+      "Implemented GraphQL gateways and event-driven services that synchronized borrower data across partners.",
+      "Introduced contract testing and Jest suites, increasing release confidence and reducing regressions.",
+      "Collaborated with architects to refactor monolithic services into scalable serverless stacks.",
+    ],
+  },
+  {
+    id: "exp-3",
+    company: "Astics Inc.",
+    position: "Node.js Developer",
+    description:
+      "Delivered microservices for logistics and operations in a fast-paced startup setting.",
+    startDate: new Date("2020-02-01"),
+    endDate: new Date("2020-10-01"),
+    isCurrentPosition: false,
+    skills: ["Node.js", "MySQL", "MongoDB", "Microservices"],
+    location: "Ahmedabad, India",
+    highlights: [
+      "Shipped REST APIs for fleet tracking, ticketing, and reporting with MySQL and MongoDB backends.",
+      "Hardened authentication and authorization layers for B2B portals and mobile clients.",
+      "Automated CI pipelines that enabled weekly production deployments.",
+    ],
+  },
+  {
+    id: "exp-4",
+    company: "Hyperlink Infosystem",
+    position: "Node.js Developer",
+    description:
+      "Delivered REST services for consumer and enterprise mobile applications.",
+    startDate: new Date("2018-01-01"),
+    endDate: new Date("2020-01-01"),
+    isCurrentPosition: false,
+    skills: ["Node.js", "Express", "MySQL", "Payments"],
+    location: "Ahmedabad, India",
+    highlights: [
+      "Developed payment integrations with Payfort, Stripe, and PayGate across multiple mobility products.",
+      "Optimized MySQL queries and caching layers, improving response times by 40%.",
+      "Partnered with Android/iOS teams to define API contracts and deployment readiness checklists.",
+    ],
+  },
+];
