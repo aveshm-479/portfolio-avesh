@@ -15,7 +15,7 @@ const About: React.FC = () => {
   }, {} as Record<SkillCategory, typeof skills>);
 
   const metrics = [
-    { label: "Years of Backend Experience", value: "6+" },
+    { label: "Years of Backend Experience", value: "8+" },
     { label: "Primary Stack", value: "Node.js · TypeScript · AWS" },
     { label: "Industries Served", value: "FinTech, Aviation, SaaS" },
   ];

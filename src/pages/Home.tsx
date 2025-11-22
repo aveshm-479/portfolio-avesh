@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  MapPin,
+  Mail,
+  Phone,
+  MessageCircle,
+} from "lucide-react";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
 import { projects, experiences } from "../data/portfolioData";
@@ -78,7 +86,7 @@ const Home: React.FC = () => {
 
               <div className="flex items-center space-x-6">
                 <a
-                  href="https://github.com/aveshmemon"
+                  href="https://github.com/aveshm-479"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 hover:text-primary-600"
@@ -106,6 +114,17 @@ const Home: React.FC = () => {
                   <Phone size={16} className="text-primary-600" />
                   <a href="tel:+918488050759" className="hover:text-primary-600">
                     +91 84880 50759
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MessageCircle size={16} className="text-primary-600" />
+                  <a
+                    href="https://wa.me/918488050759"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary-600"
+                  >
+                    Chat on WhatsApp
                   </a>
                 </div>
               </div>

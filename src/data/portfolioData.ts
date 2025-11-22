@@ -8,8 +8,37 @@ import {
 
 export const projects: Project[] = [
   {
+    id: "proj-0",
+    title: "Limitless SmartCrowd GigCX Platform",
+    company: "Limitless Technology (United Kingdom)",
+    description:
+      "Crowdsourced CX (GigCX) platform that blends SmartCrowd experts, GenAI copilots, and resilient AWS-native services for global brands.",
+    longDescription:
+      "Embedded with Limitless Technology as a Senior Node.js developer to modernize their SmartCrowd GigCX suite. Built GraphQL surfaces with AWS AppSync, multi-tenant REST APIs through API Gateway + Lambda, and event-driven fan-out using EventBridge, SQS, and SNS while persisting workflows in PostgreSQL. Delivered a GenAI assistant that listens to user prompts, routes them through serverless pipelines, and streams conversational answers backed by LLM services—all without disrupting existing enterprise integrations showcased on limitlesstech.com.",
+    techStack: [
+      "Node.js",
+      "TypeScript",
+      "AWS Lambda",
+      "AppSync GraphQL",
+      "API Gateway",
+      "EventBridge",
+      "SQS",
+      "SNS",
+      "PostgreSQL",
+      "GenAI",
+    ],
+    category: ProjectCategory.API,
+    image:
+      "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=600&h=400&fit=crop",
+    demoUrl: undefined,
+    githubUrl: undefined,
+    featured: true,
+    createdAt: new Date("2024-05-20"),
+  },
+  {
     id: "proj-1",
     title: "Automated Tax Reclaim Platform",
+    company: "Revenir (United Kingdom)",
     description:
       "Serverless tax recovery workflows built for Revenir alongside global banking partners.",
     longDescription:
@@ -34,10 +63,11 @@ export const projects: Project[] = [
   {
     id: "proj-2",
     title: "MROTools.io Suite",
+    company: "QOCO (Finland)",
     description:
-      "Tool management platform for QOCO that unifies assignment workflows and integration APIs.",
+      "Full-stack React + Node (Fastify) platform for QOCO that unifies assignment workflows and integration APIs on serverless AWS Lambda.",
     longDescription:
-      "Delivered multi-tenant Node.js services with Fastify and tRPC, hardened schema contracts with Zod/TypeBox, and automated deployments across AWS to keep aviation tooling operations in sync in real time.",
+      "Served as a full-stack engineer building React frontends and Fastify-powered Node.js Lambdas that keep aviation tooling operations in sync. Deployed multi-tenant services across AWS, leveraged tRPC with Zod/TypeBox contracts, and paired the backend with responsive React dashboards to orchestrate assignments, integrations, and telemetry in real time.",
     techStack: [
       "Node.js",
       "Fastify",
@@ -47,7 +77,7 @@ export const projects: Project[] = [
       "Prisma",
       "React",
     ],
-    category: ProjectCategory.WEB,
+    category: ProjectCategory.API,
     image:
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop",
     demoUrl: undefined,
@@ -58,6 +88,7 @@ export const projects: Project[] = [
   {
     id: "proj-3",
     title: "GamerzArena Esports Platform",
+    company: "GamerzArena (North America)",
     description:
       "Global esports community delivering tournaments, payouts, and sponsorship experiences.",
     longDescription:
@@ -66,7 +97,7 @@ export const projects: Project[] = [
     category: ProjectCategory.WEB,
     image:
       "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop",
-    demoUrl: "https://www.gamerzarena.com",
+    demoUrl: undefined,
     githubUrl: undefined,
     featured: true,
     createdAt: new Date("2022-04-01"),
@@ -74,6 +105,7 @@ export const projects: Project[] = [
   {
     id: "proj-4",
     title: "TeroTAM Asset Intelligence",
+    company: "TeroTAM (India)",
     description:
       "Asset management and service ticketing platform for distributed enterprises.",
     longDescription:
@@ -97,6 +129,7 @@ export const projects: Project[] = [
   {
     id: "proj-5",
     title: "EZHL Roadside Assistance",
+    company: "EZHL (United Arab Emirates)",
     description:
       "Dual-sided mobile platform that connects customers and drivers for vehicle towing.",
     longDescription:
@@ -112,7 +145,7 @@ export const projects: Project[] = [
     category: ProjectCategory.MOBILE,
     image:
       "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=600&h=400&fit=crop",
-    demoUrl: "https://ezhlapp.com",
+    demoUrl: undefined,
     githubUrl: undefined,
     featured: false,
     createdAt: new Date("2020-06-01"),
@@ -120,6 +153,7 @@ export const projects: Project[] = [
   {
     id: "proj-6",
     title: "LeagueUp Tournament Platform",
+    company: "LeagueUp (India)",
     description:
       "Mobile-first league registration and score tracking solution for amateur sports.",
     longDescription:

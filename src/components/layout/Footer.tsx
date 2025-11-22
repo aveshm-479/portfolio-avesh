@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Heart } from "lucide-react";
+import { Github, Linkedin, Heart, MessageCircle } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -7,13 +7,18 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       icon: <Github size={20} />,
-      href: "https://github.com/aveshmemon",
+      href: "https://github.com/aveshm-479",
       label: "GitHub",
     },
     {
       icon: <Linkedin size={20} />,
       href: "https://www.linkedin.com/in/avesh-memon-bb2301186",
       label: "LinkedIn",
+    },
+    {
+      icon: <MessageCircle size={20} />,
+      href: "https://wa.me/918488050759",
+      label: "WhatsApp",
     },
   ];
 

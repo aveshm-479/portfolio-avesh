@@ -8,6 +8,7 @@ import {
   Github,
   Linkedin,
   CheckCircle,
+  MessageCircle,
 } from "lucide-react";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
@@ -51,18 +52,28 @@ const Contact: React.FC = () => {
       label: "Email",
       value: "aveshm479@gmail.com",
       href: "mailto:aveshm479@gmail.com",
+      isExternal: false,
     },
     {
       icon: <Phone size={24} />,
       label: "Phone",
       value: "+91 84880 50759",
       href: "tel:+918488050759",
+      isExternal: false,
+    },
+    {
+      icon: <MessageCircle size={24} />,
+      label: "WhatsApp",
+      value: "Chat on WhatsApp",
+      href: "https://wa.me/918488050759",
+      isExternal: true,
     },
     {
       icon: <MapPin size={24} />,
       label: "Location",
       value: "Ahmedabad, Gujarat, India",
       href: null,
+      isExternal: false,
     },
   ];
 
@@ -70,7 +81,7 @@ const Contact: React.FC = () => {
     {
       icon: <Github size={20} />,
       label: "GitHub",
-      href: "https://github.com/aveshmemon",
+      href: "https://github.com/aveshm-479",
       color: "hover:bg-gray-900",
     },
     {
@@ -78,6 +89,12 @@ const Contact: React.FC = () => {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/avesh-memon-bb2301186",
       color: "hover:bg-blue-700",
+    },
+    {
+      icon: <MessageCircle size={20} />,
+      label: "WhatsApp",
+      href: "https://wa.me/918488050759",
+      color: "hover:bg-green-600",
     },
   ];
 
@@ -125,6 +142,8 @@ const Contact: React.FC = () => {
                       {info.href ? (
                         <a
                           href={info.href}
+                          target={info.isExternal ? "_blank" : undefined}
+                          rel={info.isExternal ? "noopener noreferrer" : undefined}
                           className="text-gray-600 hover:text-primary-600 transition-colors"
                         >
                           {info.value}

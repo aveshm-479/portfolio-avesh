@@ -23,8 +23,6 @@ const Projects: React.FC = () => {
     return matchesFilter && matchesSearch;
   });
 
-  const categories = Object.values(ProjectCategory);
-
   return (
     <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +59,7 @@ const Projects: React.FC = () => {
             />
           </div>
 
-          {/* Category Filter */}
+          {/* Category Filter placeholder for future categories */}
           <div className="flex flex-wrap justify-center gap-2">
             <button
               onClick={() => setFilter("ALL")}
@@ -73,19 +71,6 @@ const Projects: React.FC = () => {
             >
               All Projects
             </button>
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  filter === category
-                    ? "bg-primary-600 text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
           </div>
         </motion.div>
 
@@ -121,6 +106,11 @@ const Projects: React.FC = () => {
                         </span>
                       )}
                     </div>
+                    {project.company && (
+                      <p className="text-sm text-primary-600 font-semibold">
+                        {project.company}
+                      </p>
+                    )}
 
                     <p className="text-gray-600 text-sm">
                       {project.description}
