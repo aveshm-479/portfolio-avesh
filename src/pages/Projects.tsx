@@ -6,6 +6,75 @@ import Button from "../components/ui/Button";
 import { projects } from "../data/portfolioData";
 import { ProjectCategory } from "../types/portfolio";
 
+// Keywords to highlight in project descriptions
+const KEYWORDS = [
+  "GenAI",
+  "AWS",
+  "AppSync",
+  "PostgreSQL",
+  "Kafka",
+  "Serverless",
+  "SQS",
+  "SNS",
+  "EventBridge",
+  "Lambda",
+  "React",
+  "Fastify",
+  "tRPC",
+  // backend & db
+  "Node.js",
+  "Node",
+  "MySQL",
+  "MongoDB",
+  "TypeScript",
+  "Typescript",
+];
+
+function renderHighlighted(text: string) {
+  if (!text) return null;
+  // Escape keywords for safe regex building and split while preserving matches
+  const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`(${KEYWORDS.map(escape).join("|")})`, "gi");
+  const parts = text.split(re);
+
+  return (
+    <>
+      {parts.map((part, i) => {
+        if (!part) return null;
+        const isKeyword = KEYWORDS.some((k) => k.toLowerCase() === part.toLowerCase());
+        return isKeyword ? (
+          <strong key={i} className="font-semibold">
+            {part}
+          </strong>
+        ) : (
+          <span key={i}>{part}</span>
+        );
+      })}
+    </>
+  );
+}
+
+const ProjectLongDescription: React.FC<{ text: string; projectId: string }> = ({ text, projectId }) => {
+  const [expanded, setExpanded] = React.useState(false);
+  const max = 220;
+  const needsTruncate = text.length > max;
+  const shown = !needsTruncate || expanded ? text : text.slice(0, max).trim() + "...";
+
+  return (
+    <div className="mt-2">
+      <p className="text-gray-500 text-sm">{renderHighlighted(shown)}</p>
+      {needsTruncate && (
+        <button
+          onClick={() => setExpanded((s) => !s)}
+          className="mt-2 text-sm text-primary-600 hover:underline"
+        >
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+};
+
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<ProjectCategory | "ALL">("ALL");
   const [searchQuery, setSearchQuery] = useState("");
@@ -97,9 +166,16 @@ const Projects: React.FC = () => {
                   {/* Project Info */}
                   <div className="space-y-3 flex-1">
                     <div className="flex items-start justify-between">
-                      <h3 className="text-xl font-semibold text-gray-900 flex-1">
-                        {project.title}
-                      </h3>
+                      <div className="flex items-center gap-3 flex-1">
+                        <h3 className="text-xl font-semibold text-gray-900">
+                          {project.title}
+                        </h3>
+                        {project.techStack.some((t) => t.toLowerCase() === "genai") && (
+                          <span className="text-xs font-semibold text-primary-600">
+                            GenAI
+                          </span>
+                        )}
+                      </div>
                       {project.featured && (
                         <span className="px-2 py-1 bg-primary-100 text-primary-700 text-xs rounded-md font-medium">
                           Featured
@@ -107,24 +183,42 @@ const Projects: React.FC = () => {
                       )}
                     </div>
                     {project.company && (
-                      <p className="text-sm text-primary-600 font-semibold">
-                        {project.company}
-                      </p>
+                      project.companyUrl ? (
+                        <a
+                          href={project.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary-600 font-semibold hover:underline"
+                        >
+                          {project.company}
+                        </a>
+                      ) : (
+                        <p className="text-sm text-primary-600 font-semibold">
+                          {project.company}
+                        </p>
+                      )
                     )}
 
                     <p className="text-gray-600 text-sm">
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-1">
-                      {project.techStack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    {project.longDescription && (
+                      <ProjectLongDescription text={project.longDescription} projectId={project.id} />
+                    )}
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech) => {
+                        const isGenAI = tech.toLowerCase() === "genai";
+                        return (
+                          <span
+                            key={tech}
+                            className={isGenAI ? "text-xs font-semibold text-primary-600" : "px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md"}
+                          >
+                            {tech}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
 

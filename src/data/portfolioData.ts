@@ -11,10 +11,11 @@ export const projects: Project[] = [
     id: "proj-0",
     title: "Limitless SmartCrowd GigCX Platform",
     company: "Limitless Technology (United Kingdom)",
+    companyUrl: "https://www.limitlesstech.com/",
     description:
-      "Crowdsourced CX (GigCX) platform that blends SmartCrowd experts, GenAI copilots, and resilient AWS-native services for global brands.",
+      "Contributed to the Limitless GigCX SmartCrowd platform used by global brands (Sony PlayStation, HP, Microsoft). Built a serverless, event-driven backend and developer-facing APIs.",
     longDescription:
-      "Embedded with Limitless Technology as a Senior Node.js developer to modernize their SmartCrowd GigCX suite. Built GraphQL surfaces with AWS AppSync, multi-tenant REST APIs through API Gateway + Lambda, and event-driven fan-out using EventBridge, SQS, and SNS while persisting workflows in PostgreSQL. Delivered a GenAI assistant that listens to user prompts, routes them through serverless pipelines, and streams conversational answers backed by LLM services—all without disrupting existing enterprise integrations showcased on limitlesstech.com.",
+      "Senior Node.js engineer for Limitless SmartCrowd (Sony, HP, Microsoft). Built a serverless, event-driven backend (Lambda, DynamoDB, EventBridge, SQS) and scalable REST/AppSync APIs. Added GenAI assistants to automate support workflows and maintained observability and cost efficiency for 10K+ daily requests.",
     techStack: [
       "Node.js",
       "TypeScript",
@@ -39,10 +40,11 @@ export const projects: Project[] = [
     id: "proj-1",
     title: "Automated Tax Reclaim Platform",
     company: "Revenir (United Kingdom)",
+    companyUrl: "https://www.revenir.ai/",
     description:
-      "Serverless tax recovery workflows built for Revenir alongside global banking partners.",
+      "Serverless tax-reclaim automation platform for banks and government partners, enabling automated submissions, validations, and payouts.",
     longDescription:
-      "Designed and implemented event-driven services that orchestrate submissions, validations, and payouts by combining AWS Lambda, Step Functions, Kafka, and DynamoDB with resilient Node.js APIs.",
+      "Designed serverless tax-reclaim systems for banks using Node.js, Kafka, Lambda, Step Functions and DynamoDB. Delivered resilient, testable services that automate submission, validation and payout flows for high-throughput pipelines.",
     techStack: [
       "Node.js",
       "TypeScript",
@@ -64,10 +66,11 @@ export const projects: Project[] = [
     id: "proj-2",
     title: "MROTools.io Suite",
     company: "QOCO (Finland)",
+    companyUrl: "https://www.qoco.aero/mrotools",
     description:
       "Full-stack React + Node (Fastify) platform for QOCO that unifies assignment workflows and integration APIs on serverless AWS Lambda.",
     longDescription:
-      "Served as a full-stack engineer building React frontends and Fastify-powered Node.js Lambdas that keep aviation tooling operations in sync. Deployed multi-tenant services across AWS, leveraged tRPC with Zod/TypeBox contracts, and paired the backend with responsive React dashboards to orchestrate assignments, integrations, and telemetry in real time.",
+      "Full-stack engineer building React dashboards and Fastify Node.js Lambdas for aviation tooling. Deployed multi-tenant AWS services, used tRPC for typed APIs, and integrated Prisma/Postgres to orchestrate assignments and telemetry.",
     techStack: [
       "Node.js",
       "Fastify",
@@ -90,9 +93,9 @@ export const projects: Project[] = [
     title: "GamerzArena Esports Platform",
     company: "GamerzArena (North America)",
     description:
-      "Global esports community delivering tournaments, payouts, and sponsorship experiences.",
+      "Global esports platform delivering tournaments, leaderboards, and prize fulfillment with high-concurrency REST services.",
     longDescription:
-      "Built REST services for admin, web, and mobile clients with Node.js and MySQL, optimizing leaderboards, authentication, and prize fulfillment for thousands of concurrent gamers.",
+      "Built high-concurrency REST services with Node.js and MySQL for an esports platform: authentication, leaderboard calculations, prize fulfillment and payment integrations to support large concurrent players.",
     techStack: ["Node.js", "Express", "MySQL", "REST", "Redis", "AWS"],
     category: ProjectCategory.WEB,
     image:
@@ -107,9 +110,9 @@ export const projects: Project[] = [
     title: "TeroTAM Asset Intelligence",
     company: "TeroTAM (India)",
     description:
-      "Asset management and service ticketing platform for distributed enterprises.",
+      "Total asset management and online service ticketing platform with microservices for distributed teams.",
     longDescription:
-      "Implemented microservices in Node.js with PostgreSQL and MongoDB, enabling real-time asset monitoring, ticket workflows, and analytics across field teams.",
+      "Delivered a microservices asset-management solution using TypeScript, Postgres and MongoDB. Implemented ticketing, asset discovery and resilient inter-service communication with strong typing and audit trails.",
     techStack: [
       "Node.js",
       "TypeScript",
@@ -133,7 +136,7 @@ export const projects: Project[] = [
     description:
       "Dual-sided mobile platform that connects customers and drivers for vehicle towing.",
     longDescription:
-      "Delivered secure payment-enabled REST services using Node.js, MySQL, and Payfort/Stripe gateways, powering customer apps, driver apps, and partner dashboards.",
+      "Built secure, payment-enabled REST APIs with Node.js and MySQL, integrating Stripe/Payfort to connect customers, drivers and partner dashboards.",
     techStack: [
       "Node.js",
       "Express",
@@ -155,9 +158,9 @@ export const projects: Project[] = [
     title: "LeagueUp Tournament Platform",
     company: "LeagueUp (India)",
     description:
-      "Mobile-first league registration and score tracking solution for amateur sports.",
+      "Mobile-first league registration and score-tracking platform with REST APIs and live standings.",
     longDescription:
-      "Built resilient REST APIs with Node.js and MySQL, enabling organizers to configure tournaments, capture scores, and push live standings to Android/iOS apps.",
+      "Developed mobile-first APIs and background jobs with Node.js and MySQL to handle tournament registration, score aggregation and real-time leaderboards for Android and iOS clients.",
     techStack: ["Node.js", "Express", "MySQL", "Firebase", "REST APIs"],
     category: ProjectCategory.MOBILE,
     image:

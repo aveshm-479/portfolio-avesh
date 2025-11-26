@@ -1,7 +1,8 @@
 export interface Project {
   id: string;
   title: string;
-  company?: string;
+  company?: string; // This line already exists
+  companyUrl?: string; // Adding the new optional field
   description: string;
   longDescription?: string;
   techStack: string[];
